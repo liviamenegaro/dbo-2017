@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Strings!</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function w(conteudo) { // função para escrever
+        document.write(conteudo);
+      }
+
+      function h(n, texto) {
+        var s = '<h' + n + '>' + texto + '</h' + n + '>';
+        return s;
+      }
+
+      function upcase(str) {
+        var ret = '';
+        for(var i = 0; i < str.length; i++){
+          var code = str.charCodeAt(i);
+          if(code >= 97 && code <= 122){
+            ret += String.fromCharCode(code - 32);
+          } else {
+            ret += str[i];
+          }
+        }
+        return ret;
+      }
+
+      w('teste');
+      console.log(h(1, 'titulo') === '<h1>titulo</h1>');
+      w(h(1,'titulo'));
+      console.log(h(2, 'subtitulo') === '<h2>subtitulo</h2>');
+      w(h(2, 'subtitulo'));
+
+      console.log('upcase de TextO é TEXTO', upcase('TextO') === 'TEXTO');
+
+      console.log(upcase('Te1tO'));
+
+      w(h(1, upcase('meu titulo')));
+      w(upcase(h(1,'outro titulo')));
+    </script>
+
+
+  </body>
+</html>

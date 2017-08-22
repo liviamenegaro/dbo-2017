@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Album</title>
+  </head>
+  <body>
+
+    <h1>Álbum</h1>
+
+    <form id="form">
+      <label>Endereço da imagem</label>
+      <input id="endereco" type="text" autofocus />
+      <button>Adicionar ao Álbum</button>
+    </form>
+
+
+    <div id="imagens"></div>
+
+    <script>
+      var bt = document.getElementById('adicionar');
+      var form = document.getElementById('form')
+      var endereco = document.getElementById('endereco');
+      var imagens = document.getElementById('imagens');
+      form.onsubmit = function () {
+        var img = document.createElement('img');
+        img.src = endereco.value;
+        img.style['max-width'] = "100%";
+        imagens.appendChild(img);
+        return false;
+      };
+    </script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

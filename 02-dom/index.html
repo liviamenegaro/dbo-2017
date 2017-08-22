@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teste DOM</title>
+  </head>
+  <body>
+    <h1>Teste do Dom</h1>
+
+
+    <img id="logo" src="hp.png"
+         alt="Imagem de Harry Potter"
+         width = "10%"
+         height = "10%"
+    />
+
+      <!-- unordered list -->
+    <ul id="lista">
+      <li>Matemática II</li>  <!-- list item  -->
+      <li>DBO</li>
+      <li>Química I</li>
+      <li>Física II</li>
+    </ul>
+
+    <input id="disciplina" type="text" />
+    <button id = "bt_adicionar">Adicionar</button>
+
+
+    <script type="text/javascript">
+      //var img = document.getElementsByTagName('img')[0];
+      var img = document.getElementById('logo');
+      img.onmouseover = function(){
+        img.setAttribute('width','100%'); //400px
+        img.setAttribute('height','100%'); //300px
+      };
+      var button = document.getElementById('bt_adicionar');
+      var input = document.getElementById('disciplina');
+      var ul = document.getElementById('lista');
+
+      button.onclick = function () {
+        var texto = input.value;
+        var li = document.createElement('li');
+        li.textContent = texto;
+        ul.appendChild(li);
+      };
+    </script>
+
+
+  </body>
+</html>

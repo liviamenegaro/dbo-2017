@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mais funções</title>
+  </head>
+  <body>
+      <h1>Mais funções</h1>
+
+      <script type="text/javascript">
+        function subtrai(a, b) {
+          var r = a - b;
+          return r;
+        }
+        function multiplica(a, b) {
+          for(var i = 0; (i <= b); i++)
+          { var r = a+a;
+          }
+          return r;
+        }
+        
+        var c = subtrai(9, 2);
+        //document.write(c);
+        //alert(c); // NÃO USAR
+        console.log(c); //INÚTIL P/ O USÚARIO FINAL
+        // "Testagem"
+        // Casos de Teste e Assertivas
+        //Caso de Teste #1
+        console.log('9 - 2 = 7', c === 7);
+        //Caso de Teste #2: 2 -2 = 0
+        console.log('2 - 2 = 0', subtrai(2,2) === 0);
+        // Especificação: o que quer se ter!
+        console.log('8 * 2 = 16', multiplica(8, 2) === 16);
+      </script>
+
+
+  </body>
+</html>
